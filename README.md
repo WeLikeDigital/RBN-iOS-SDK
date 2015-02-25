@@ -21,9 +21,10 @@ pod 'RBN-iOS-SDK'
 1. Импортируйте заголовочный файл RBN-iOS-SDK.h
 
 ```Objective-C
-	#import "WeLikeBeacons.h"
+	#import "RBN-iOS-SDK.h"
 ```
-2. Поместите этот код в метод делегата приложения (или в любое другое место, откуда вам удобнее :
+
+2. Инициализируйте SDK, используя ваш приватный ключ и указав delegate для RBN-iOS-SDK. В данном случае инициализация происходит в AppDelegate методе -application:didFinishLaunchingWithOptions:
 
 ```Objective-C
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
