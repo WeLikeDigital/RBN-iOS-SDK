@@ -1,2 +1,2 @@
-# RBN-iOS-SDK
+# RBN SDK для iOS
 SDK для подключения к Russian Beacon Network
