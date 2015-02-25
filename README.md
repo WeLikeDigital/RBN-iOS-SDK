@@ -18,11 +18,13 @@ pod 'RBN-iOS-SDK'
 
 ### Инициализация SDK
 
-1. Поместите этот код в метод делегата приложения:
+1. Импортируйте заголовочный файл RBN-iOS-SDK.h
+ ```Objective-C
+	#import "WeLikeBeacons.h"
+```
+2. Поместите этот код в метод делегата приложения (или в любое другое место, откуда вам удобнее :
 
 ```Objective-C
-	#import "WeLikeBeacons.h"
- 
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //init RBN SDK
     [WeLikeBeacons startSession:@"YOUR_API_KEY"];
@@ -30,6 +32,7 @@ pod 'RBN-iOS-SDK'
   }
 ```
 
+### Описание RBN-iOS-SDKDelegate
 
 ## Получение API ключа
 Для получения уникального API ключа приложения свяжитесь с нами по адресу welike@welike.ru
