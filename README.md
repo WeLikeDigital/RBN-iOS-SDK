@@ -5,10 +5,11 @@ SDK позволяет подключить ваше приложение к Rus
 
 ## Подключение SDK в iOS-приложении
 
-### Установка через CocoaPods
-CocoaPods – это менеджер зависимостей, автоматизирующий и упрощающий процесс использования сторонних библиотек, таких как RBN SDK. Более подробную информацию Вы можете найти на сайте [CocoaPods](http://cocoapods.org). 
+Установка RBN-iOS-SDK происходит через CocoaPods.
 
-Для установки через CocoaPods добавьте в Ваш Podfile строку:
+[Что такое CocoaPods?](http://cocoapods.org)
+
+Просто добавьте в Ваш Podfile строку:
 
 ```ruby
 pod 'RBN-iOS-SDK'
@@ -25,13 +26,11 @@ pod 'RBN-iOS-SDK'
 #####2. Инициализируйте SDK, используя в качестве параметров ваш приватный ключ и delegate для RBN-iOS-SDK.
 
 ```Objective-C
-    //init RBN SDK
     [RBN setupWithAppSecret:@"YOUR_SECRET_KEY" delegate:delegate];
-    // Your code ...
-
 ```
 
 #####3. В файле info.plist необходимо добавить поле с ключом NSLocationAlwaysUsageDescription типа String. В качестве значения указать текст, который будет показан пользователю при запросе прав на использование геолокации.
+
 
 #####4. Если вы планируете отправлять пользователям уведомления через Russian Beacon Network, вам необходимо в AppDelegate добавить два метода:
 
