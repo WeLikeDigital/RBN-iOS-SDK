@@ -53,10 +53,13 @@ pod 'RBN-iOS-SDK'
 
 ## Описание RBNDelegate
 
+```Objective-C
+@optional
+```
+
 Этот метод будет вызван, если необходимо показать на экране страницу с акцией, информация о которой содержится в объекте ad:
 
 ```Objective-C
-@optional
 -(void)presentAdvertisement:(RBNAd*)ad;
 ```
 
@@ -64,7 +67,6 @@ pod 'RBN-iOS-SDK'
 Метод вызывается, если использование служб геолокации *ограниченно на данном устройстве* (iOS Restrictions):
 
 ```Objective-C
-@optional
 -(void)rbnRequestsDisableRestrictionForLocationServices;
 ```
 
@@ -72,23 +74,26 @@ pod 'RBN-iOS-SDK'
 Метод вызывается, если службы геолокации отключены *для всего устройства* и требуется попросить пользователя включить их:
 
 ```Objective-C
-@optional
 -(void)rbnRequestsEnableLocationServices;
 ```
 
 Метод вызывается, если требуемый тип службы геолокации запрещен пользователем *для данного приложения*. Нужно попросить его включить AlwaysAuthorization:
 
 ```Objective-C
-@optional
 -(void)rbnRequestsAlwaysAuthorizationLocationServices;
 ```
 
+Метод вызывается, есть BLE недоступен на данном устройстве.
+
 ```Objective-C
-@optional
 -(void)rbnReportsThatBLEIsNotSupportedForThisDevice;
 ```
 
-Метод вызывается, есть BLE недоступен на данном устройстве.
+Метод вызывается, если пользователь по каким-то причинам отключил блютуз.
+
+```Objective-C
+-(void)rbnRequestsEnableBluetooth;
+```
 
 ## Описание RBNAd
 ## Описание RBNLocationDelegate
