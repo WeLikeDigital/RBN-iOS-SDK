@@ -83,7 +83,15 @@ pod 'RBN-iOS-SDK'
 -(void)rbnRequestsAlwaysAuthorizationLocationServices;
 ```
 
+```Objective-C
+@optional
+-(void)rbnReportsThatBLEIsNotSupportedForThisDevice;
+```
+
+Метод вызывается, есть BLE недоступен на данном устройстве.
+
 ## Описание RBNAd
+## Описание RBNLocationDelegate
 
 ## Получение приватного ключа
 Для получения уникального API ключа приложения свяжитесь с нами по адресу welike@welike.ru
