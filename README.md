@@ -65,10 +65,23 @@ pod 'RBN-iOS-SDK'
 
 ```Objective-C
 @optional
--(void)rbnRequestsDisableRestrictionForLocationServices
+-(void)rbnRequestsDisableRestrictionForLocationServices;
 ```
 
 
+Метод вызывается, если Службы геолокации отключены для всего устройства и требуется попросить пользователя включить их:
+
+```Objective-C
+@optional
+-(void)rbnRequestsEnableLocationServices;
+```
+
+Метод вызывается, если требуемый тип службы геолокации запрещен пользователем для данного приложения. Требуется попросить его включить AlwaysAuthorization:
+
+```Objective-C
+@optional
+-(void)rbnRequestsAlwaysAuthorizationLocationServices;
+```
 
 ## Описание RBNAd
 
