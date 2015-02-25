@@ -24,14 +24,13 @@ pod 'RBN-iOS-SDK'
 	#import "RBN-iOS-SDK.h"
 ```
 
-2. Инициализируйте SDK, используя ваш приватный ключ и указав delegate для RBN-iOS-SDK. В данном случае инициализация происходит в AppDelegate методе -application:didFinishLaunchingWithOptions:
+2. Инициализируйте SDK, используя в качестве параметров ваш приватный ключ и delegate для RBN-iOS-SDK.
 
 ```Objective-C
-  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //init RBN SDK
-    [WeLikeBeacons startSession:@"YOUR_API_KEY"];
+    [RBN-iOS-SDK setupWithAppSecret:@"YOUR_SECRET_KEY" delegate:delegate];
     // Your code ...
-  }
+
 ```
 
 ### Описание RBN-iOS-SDKDelegate
