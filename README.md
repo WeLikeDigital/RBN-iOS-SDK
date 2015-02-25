@@ -33,6 +33,8 @@ pod 'RBN-iOS-SDK'
 
 ```
 
+3. Если вы планируете отправлять пользователям уведомления через Russian Beacon Network, вам необходимо в AppDelegate описать два метода: application:didReceiveLocalNotification: и application:handleActionWithIdentifier:forLocalNotification:completionHandler:
+
 ### Описание RBN-iOS-SDKDelegate
 
 ## Получение API ключа
