@@ -5,15 +5,13 @@ SDK позволяет подключить ваше приложение к Rus
 
 ## Подключение SDK в iOS-приложении
 
-Установка RBN-iOS-SDK происходит через CocoaPods.
-
-[Что такое CocoaPods?](http://cocoapods.org)
-
-Просто добавьте в Ваш Podfile строку:
+Установка RBN-iOS-SDK происходит через dependency manager - CocoaPods. Просто добавьте в Ваш Podfile строку:
 
 ```ruby
 pod 'RBN-iOS-SDK'
 ```
+[Что такое CocoaPods?](http://cocoapods.org)
+
 
 ## Настройка и инициализация
 
@@ -23,11 +21,13 @@ pod 'RBN-iOS-SDK'
 	#import <RBN-iOS-SDK/RBN.h>
 ```
 
+
 #####2. Инициализируйте SDK, используя в качестве параметров ваш приватный ключ и delegate для RBN-iOS-SDK.
 
 ```Objective-C
     [RBN setupWithAppSecret:@"YOUR_SECRET_KEY" delegate:delegate];
 ```
+
 
 #####3. В файле info.plist необходимо добавить поле с ключом NSLocationAlwaysUsageDescription типа String. В качестве значения указать текст, который будет показан пользователю при запросе прав на использование геолокации.
 
@@ -48,11 +48,12 @@ pod 'RBN-iOS-SDK'
 }
 ```
 
+
 Это необходимо, чтобы мы могли правильно обработать открытие пользователем конкретного уведомления и показать необходимую информацию.
 
 ### Описание RBNDelegate
 
-## Получение API ключа
+## Получение приватного ключа
 Для получения уникального API ключа приложения свяжитесь с нами по адресу welike@welike.ru
 
 ## Требования
