@@ -61,6 +61,12 @@ pod 'RBN-iOS-SDK'
 Этот метод будет вызван, если необходимо показать на экране страницу с акцией, информация о которой содержится в объекте ad.
 
 
+```Objective-C
+@optional
+-(void)rbnRequestsDisableRestrictionForLocationServices
+```
+
+Метод вызывается, если использование служб геолокации ограниченно на данном устройстве (iOS Restrictions).
 
 ## Описание RBNAd
 
