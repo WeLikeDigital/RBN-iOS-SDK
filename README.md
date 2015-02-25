@@ -14,19 +14,19 @@ CocoaPods – это менеджер зависимостей, автомати
 pod 'RBN-iOS-SDK'
 ```
 
-## Работа с SDK
+## Настройка и инициализация
 
-#####1. Импортируйте заголовочный файл RBN-iOS-SDK.h
+#####1. Импортируйте заголовочный файл RBN.h
 
 ```Objective-C
-	#import "RBN-iOS-SDK.h"
+	#import "RBN.h"
 ```
 
 #####2. Инициализируйте SDK, используя в качестве параметров ваш приватный ключ и delegate для RBN-iOS-SDK.
 
 ```Objective-C
     //init RBN SDK
-    [RBN-iOS-SDK setupWithAppSecret:@"YOUR_SECRET_KEY" delegate:delegate];
+    [RBN setupWithAppSecret:@"YOUR_SECRET_KEY" delegate:delegate];
     // Your code ...
 
 ```
@@ -36,12 +36,12 @@ pod 'RBN-iOS-SDK'
 ```Objective-C
 
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {    
-    [RBN-iOS-SDK handleLocalNotification:notification];
+    [RBN handleLocalNotification:notification];
 }
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler {
     
-    [RBN-iOS-SDK handleLocalNotification:notification];
+    [RBN handleLocalNotification:notification];
     
     completionHandler();
 }
@@ -49,7 +49,7 @@ pod 'RBN-iOS-SDK'
 
 Это необходимо, чтобы мы могли правильно обработать открытие пользователем конкретного уведомления и показать необходимую информацию.
 
-### Описание RBN-iOS-SDKDelegate
+### Описание RBNDelegate
 
 ## Получение API ключа
 Для получения уникального API ключа приложения свяжитесь с нами по адресу welike@welike.ru
