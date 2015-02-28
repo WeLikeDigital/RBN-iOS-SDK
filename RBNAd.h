@@ -9,7 +9,7 @@ typedef NS_ENUM(NSInteger, AdState) {
     AdStateActionTriggered
 };
 
-@interface WeLikeAd : NSObject
+@interface RBNAd : NSObject
 
 @property (nonatomic, strong) NSString *advID;
 @property (nonatomic, strong) NSNumber *floor;

@@ -1,7 +1,7 @@
 //  Created by Darius Dark on 08/02/15.
 
-#ifndef WeLikeBeacons_WeLikeHelpers_h
-#define WeLikeBeacons_WeLikeHelpers_h
+#ifndef RBN_IOS_SDK_RBNHelpers_h
+#define RBN_IOS_SDK_RBNHelpers_h
 
 @import Foundation;
 
