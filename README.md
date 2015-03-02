@@ -97,7 +97,7 @@ pod 'RBN-iOS-SDK'
 -(void)rbnReportsThatBLEIsNotSupportedForThisDevice;
 ```
 
-Метод вызывается, если пользователь по каким-то причинам **отключил блютуз**:
+Метод вызывается, если по каким-то причинам **пользователь отключил блютуз**:
 
 ```Objective-C
 -(void)rbnRequestsEnableBluetooth;
@@ -107,6 +107,12 @@ pod 'RBN-iOS-SDK'
 
 ```Objective-C
 -(void)rbnReportsThatBeaconsModuleRunning;
+```
+
+Если вы **не желаете описывать методы получения статуса сервиса iBeacon**, но хотите уведомлять пользователя о возможных проблемах с ним, вам достаточно просто возвращать YES из следующего метода:
+
+```Objective-C
+-(BOOL)rbnShouldUseDefaultReporting;
 ```
 
 ## Описание RBNAd
