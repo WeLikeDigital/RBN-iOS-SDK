@@ -13,6 +13,7 @@
 
 -(void)presentAdvertisement:(RBNAd*)ad;
 
+-(BOOL)rbnShouldUseDefaultReporting;
 
 //Location serivces feedback:
 
@@ -23,6 +24,8 @@
 -(void)rbnRequestsAlwaysAuthorizationLocationServices;
 
 -(void)rbnReportsThatBLEIsNotSupportedForThisDevice;
+
+-(void)rbnReportsThatBeaconsModuleRunning;
 
 
 @end
