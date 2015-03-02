@@ -60,7 +60,7 @@ pod 'RBN-iOS-SDK'
 }
 ```
 
-## Полное описание RBNDelegate
+## Описание RBNDelegate
 
 ####Все методы являются **@optional**. 
 
@@ -116,7 +116,20 @@ pod 'RBN-iOS-SDK'
 ```
 
 ## Описание RBNAd
+
 ## Описание RBNLocationDelegate
+
+Следующий метод вызывается (не чаще чем раз в секунду), если RBN-iOS-SDK обновил геопозицию пользователя.
+
+```Objective-C
+-(void)rbnDidUpdateLocation:(CLLocation*)location fromLocation:(CLLocation*)oldLocation forLayerID:(NSString*)layerID;
+
+/**
+location - текущая координата пользователя
+oldLocation - предыдущая коордиана пользователя
+layerID - идентификатор этажа, на котором находится пользователь
+*/
+```
 
 ## Получение приватного ключа
 Для получения уникального API ключа приложения свяжитесь с нами по адресу welike@welike.ru
