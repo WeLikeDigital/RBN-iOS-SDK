@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/WeLikeDigital/RBN-iOS-SDK.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/WeLikeDigital/RBN-iOS-SDK.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -114,7 +114,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   s.frameworks = 'CoreLocation', 'Foundation', 'CoreBluetooth', 'UIKit', 'AVFoundation', 'AdSupport'
 
-  # s.library   = "iconv"
+  s.library   = "RBN-iOS-SDK"
   # s.libraries = "iconv", "xml2"
 
 
@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.vendored_libraries = 'RBN-iOS-SDK.a'
+  s.vendored_libraries = 'libRBN-iOS-SDK.a'
 
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/RBN-iOS-SDK/"' }
   s.dependency "KZPropertyMapper"
