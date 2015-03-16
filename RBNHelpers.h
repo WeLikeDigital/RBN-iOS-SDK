@@ -34,4 +34,11 @@ SI void Disobserve(id observer) {
     [[NSNotificationCenter defaultCenter] removeObserver:observer];
 }
 
+SI NSString* DocumentsPath() {
+    NSArray *docPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = docPaths[0];
+    
+    return docPath;
+}
+
 #endif
