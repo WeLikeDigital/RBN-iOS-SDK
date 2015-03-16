@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RBN-iOS-SDK"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.summary      = "SDK allows you to connect your application to the Russian Beacon Network."
 
   s.description  = <<-DESC
