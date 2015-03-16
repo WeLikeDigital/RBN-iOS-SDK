@@ -131,6 +131,8 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/RBN-iOS-SDK/"' }
   s.dependency "KZPropertyMapper"
   s.dependency 'AFNetworking'
-  s.dependency 'FMDB'	
+  s.dependency 'FMDB'
+  s.dependency 'SSZipArchive'
+		
 
 end

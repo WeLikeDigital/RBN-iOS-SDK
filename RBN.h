@@ -2,6 +2,7 @@
 
 #import "RBNAd.h"
 #import "RBNMap.h"
+#import "RBNMapLayer.h"
 #import <Foundation/Foundation.h>
 #import "RBNConstants.h"
 #import "RBNLocationDelegate.h"

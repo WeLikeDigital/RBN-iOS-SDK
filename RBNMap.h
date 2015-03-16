@@ -65,11 +65,21 @@
 /**
  @description Indicates update availability for this map.
  */
-@property (nonatomic) BOOL updateAvailable;
+@property (nonatomic, strong) NSNumber *updateAvailable;
 
+
+/**
+    Initialization methods
+*/
 
 +(instancetype)mapWithObject:(NSDictionary*)object;
 
+
+
+/**
+ Inits new clean RBNMap object
+ */
++(instancetype)mapWithName:(NSString*)name placeID:(NSString*)placeID;
 
 /**
   @description dictionary for storing
