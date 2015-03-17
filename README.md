@@ -21,7 +21,7 @@ pod 'RBN-iOS-SDK'
 ```
 
 
- 2) Инициализируйте SDK, используя ваш приватный ключ и delegate для RBN-iOS-SDK.
+ 2) Инициализируйте SDK, используя ваш приватный ключ и delegate для RBN-iOS-SDK. Delegate и ключ не могут быть nil.
 
 ```Objective-C
     [RBN setupWithAppSecret:@"YOUR_SECRET_KEY" delegate:delegate];
