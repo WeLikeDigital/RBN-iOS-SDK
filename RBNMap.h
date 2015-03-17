@@ -57,15 +57,12 @@
 
 
 /**
- URL to directory, where Graph.json data for this map stores. (For routing).
- */
-@property (nonatomic, strong) NSURL *graphURL;
-
-
-/**
  @description Indicates update availability for this map.
  */
 @property (nonatomic, strong) NSNumber *updateAvailable;
+
+
+-(NSString*)pathForRoutesJSON;
 
 
 /**
@@ -73,7 +70,6 @@
 */
 
 +(instancetype)mapWithObject:(NSDictionary*)object;
-
 
 
 /**
