@@ -62,6 +62,9 @@
 @property (nonatomic, strong) NSNumber *updateAvailable;
 
 
+/**
+ @description returns full path, where json with routes stores
+ */
 -(NSString*)pathForRoutesJSON;
 
 
