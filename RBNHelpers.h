@@ -41,4 +41,25 @@ SI NSString* DocumentsPath() {
     return docPath;
 }
 
+SI void SkipForBackup(NSString* path) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:path];
+        
+        if (fileURL == nil)
+            return;
+        
+        NSError *error = nil;
+        
+        [fileURL setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error];
+        
+        if (error == nil) {
+            NSLog(@"Success for skipping backup for file %@", [fileURL lastPathComponent]);
+        } else {
+            NSLog(@"Error %@ for skipping backup for file %@", error, [fileURL lastPathComponent]);
+        }
+        
+    }
+}
+
 #endif
