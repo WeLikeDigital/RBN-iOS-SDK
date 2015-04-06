@@ -62,4 +62,36 @@ SI void SkipForBackup(NSString* path) {
     }
 }
 
+SI NSInteger ScanNumber(NSString *stringToScan) {
+    
+    NSMutableString *finalString = [NSMutableString string];
+    
+    NSScanner *scanner = [NSScanner scannerWithString:stringToScan];
+    NSMutableCharacterSet *numberCharacters = [NSMutableCharacterSet characterSetWithCharactersInString:@"-0123456789"];
+    
+    BOOL minus = YES;
+    
+    while (![scanner isAtEnd]) {
+        NSString *buffer;
+        
+        if ([scanner scanCharactersFromSet:numberCharacters intoString:&buffer]) {
+            [finalString appendString:buffer];
+            
+            
+            if (minus == YES) {
+                [numberCharacters removeCharactersInString:@"-"];
+            }
+            
+        } else {
+            [scanner setScanLocation:([scanner scanLocation] + 1)];
+        }
+        
+        
+        
+    }
+    
+    
+    return [finalString integerValue];
+}
+
 #endif
