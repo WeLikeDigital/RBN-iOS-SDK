@@ -15,7 +15,21 @@
 
 -(void)presentAdvertisement:(RBNAd*)ad;
 
+
+/**
+ @description Define this method and return YES in case where you need default error actionsheet-reporting
+ @description Возвращайте YES из этого метода, чтобы все ошибки, описанные ниже,  показывались пользователю в виде action-sheet'а.
+ */
 -(BOOL)rbnShouldUseDefaultReporting;
+
+
+/**
+ @description Return NO from this method, if application does not required background beacons monitoring.
+ @description Возвращай NO из этого метода, если ваше приложение не требует background-мониторинга биконов.
+ @error Needs implementation. Delegate methods just in plans
+ */
+
+//-(BOOL)locationServicesAlwaysAuthorizationRequired;
 
 #pragma mark - Location serivces feedback
 
@@ -33,6 +47,11 @@
 //Reports that everything is cool.
 -(void)rbnReportsThatBeaconsModuleRunning;
 
+
+/**
+  @description Сообщает, находится ли человек в зоне действия биконов или нет
+ */
+-(void)rbnReportsThatPersonInHouse:(BOOL)isInHouse;
 
 @end
 
@@ -71,6 +90,18 @@
  @description Сообщает, находимся ли мы в данный момент в зоне действия биконов.
  */
 +(BOOL)isInMall;
+
+
+/**
+ @description Заставляет заново проверить location service's
+ */
++(BOOL)requestServicesStatus;
+
+
+/**
+  @description Возвращает YES, если хотя бы один из биконов в списке на данный момент в радиусе устройства.
+ */
++(BOOL)isBeaconsGroupVisible:(NSArray*)beaconsID;
 
 /**
     @description Данный метод вернет последюнюю известную геолокацию, определенную по биконам. Или nil, если такой нет.
